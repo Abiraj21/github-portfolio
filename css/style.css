@@ -2,7 +2,8 @@
 :root {
     --bg-dark: #0a0a0a;
     --bg-darker: #050505;
-    --primary-color: #6c5ce7; /* Premium Purple */
+    --primary-color: #6c5ce7;
+    /* Premium Purple */
     --primary-hover: #5649c0;
     --text-light: #ffffff;
     --text-secondary: #a0a0a0;
@@ -17,7 +18,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     color: var(--text-light);
 }
@@ -53,7 +59,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--text-light) !important;
 }
 
@@ -107,8 +114,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.2; }
-    100% { transform: scale(1.2); opacity: 0.3; }
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
 }
 
 /* Cards (Skills & Projects) */
@@ -161,4 +175,57 @@ h1, h2, h3, h4, h5, h6 {
 /* Utilities */
 .opacity-75 {
     opacity: 0.75;
+}
+
+/* Profile Image Styling */
+.profile-img-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(145deg, var(--primary-color), var(--bg-dark), var(--primary-color));
+    box-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--bg-dark);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* About Image Styling */
+.about-img {
+    box-shadow: 20px 20px 0px var(--primary-color);
+    transition: all 0.3s ease;
+    border: 5px solid white;
+    max-width: 400px;
+    /* Reduced size */
+    width: 100%;
+    margin: 0 auto;
+    /* Center if block */
+    display: block;
+}
+
+.about-img:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 30px 30px 0px var(--primary-hover);
 }
